@@ -1,7 +1,7 @@
 [
     {
-        "name":"1st Card",
-        "colors":[
+        "name": "1st Card",
+        "colors": [
             {
                 "id": 1,
                 "name": "green"
@@ -17,8 +17,8 @@
         ]
     },
     {
-        "name":"2nd card",
-        "colors":[
+        "name": "2nd card",
+        "colors": [
             {
                 "id": 4,
                 "name": "blue"
@@ -34,8 +34,8 @@
         ]
     },
     {
-        "name":"3rd card",
-        "colors":[
+        "name": "3rd card",
+        "colors": [
             {
                 "id": 7,
                 "name": "purple"

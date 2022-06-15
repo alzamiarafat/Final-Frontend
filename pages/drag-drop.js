@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   const onDragEnd = (re) => {
-    var colorCheck = false
+    var colorCheck = true
     if (!re.destination) return;
     let newBoardData = boardData;
     var dragItem =
@@ -28,11 +28,8 @@ export default function Home() {
     for (let i = 0; i < dropItemData.length; i++) {
       if (dropItemData[i].name == dragItem.name) {
         colorCheck = false
-      } else {
-        colorCheck = true
       }
     }
-    alert(colorCheck)
 
     if (colorCheck) {
       newBoardData[parseInt(re.source.droppableId)].colors.splice(
@@ -53,7 +50,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="p-10 flex flex-col h-screen ">
+      <div className="max-w-7xl mx-auto px-10 sm:px-6 md:my-10 mt-8">
         {ready && (
           <DragDropContext onDragEnd={onDragEnd}>
             <div className="grid grid-cols-4 gap-5 my-5">
@@ -67,7 +64,7 @@ export default function Home() {
                           ref={provided.innerRef}
                         >
                           <div
-                            className={`bg-gray-100 rounded-md shadow-md border border-gray-400 p-5 
+                            className={`rounded-md shadow-md border border-gray-400 p-5 
                             flex flex-col relative overflow-hidden
                             ${snapshot.isDraggingOver && "bg-green-100"}`}
                           >
